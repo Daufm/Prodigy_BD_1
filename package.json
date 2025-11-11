@@ -1,0 +1,26 @@
+{
+  "name": "prodigy_bd_1",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000P\u0000r\u0000o\u0000d\u0000i\u0000g\u0000y\u0000_\u0000B\u0000D\u0000_\u00001\u0000\r\u0000 \u0000",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Daufm/Prodigy_BD_1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Daufm/Prodigy_BD_1/issues"
+  },
+  "homepage": "https://github.com/Daufm/Prodigy_BD_1#readme",
+  "dependencies": {
+    "crypto": "^1.0.1",
+    "express": "^5.1.0"
+  }
+}
