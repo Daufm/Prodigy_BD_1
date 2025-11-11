@@ -14,11 +14,26 @@ app.post("/users/create",(req, res)=>{
     const { username, email, age } = req.body;
 
     // Basic validation
-    if (!username || !email) {
+    if (!username ) {
         return res.status(400).json({ error: 'username and email are required' });
+    }
+    if(!email){
+        return res.status(400).json({ error: 'email is required' });
     }
     if (typeof age !== 'number' || age <= 0) {
         return res.status(400).json({ error: 'age must be a positive number' });
+    }
+
+  
+    if(email){
+        const emailExists = Object.values(HASH_MAP).some(user => user.email === email);
+        if(emailExists){
+            return res.status(400).json({ error: 'email must be unique' });
+        }
+        const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if(!pattern.test(email)){
+            return res.status(400).json({ error: 'email format is invalid' });
+        }
     }
 
     const id = randomUUID();
